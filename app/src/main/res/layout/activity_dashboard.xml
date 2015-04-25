@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/lblDevice"
+        android:layout_weight="1"
+        android:background="@color/common_card_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/common_text_heading"
+        android:typeface="sans" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lstInstalledApps"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="3"
+        android:divider="@color/common_card_green"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/lblDevice"
+        android:choiceMode="none" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Device"
+        android:id="@+id/btnDeviceSelection"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="95dp"
+        android:layout_marginRight="10dp"
+        android:onClick="showDeviceDialog"
+        android:nestedScrollingEnabled="false" />
+
+</RelativeLayout>
